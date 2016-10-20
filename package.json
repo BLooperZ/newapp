@@ -4,10 +4,11 @@
   "description": "This is a work-in-progress gjs app of yet unknown purpose.",
   "main": "app.js",
   "scripts": {
+    "start": "PATH=`pwd`/:$PATH app.js",
     "build": "npm run build:shebang && npm run build:rollup && npm run build:permissions",
-    "build:shebang": "echo '#!/usr/bin/env gjs\n' > bin/app",
-    "build:rollup": "rollup -c >> bin/app",
-    "build:permissions": "chmod +x bin/app"
+    "build:shebang": "echo '#!/usr/bin/env gjs\n' > app.js",
+    "build:rollup": "rollup -c >> app.js",
+    "build:permissions": "chmod +x app.js"
   },
   "keywords": [
     "app",
