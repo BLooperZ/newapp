@@ -2,20 +2,25 @@
   "name": "newapp",
   "version": "0.0.0",
   "description": "This is a work-in-progress gjs app of yet unknown purpose.",
-  "main": "app.js",
+  "main": "./app",
+  "bin": "./app",
+  "repository" :
+  { "type" : "git",
+    "url" : "https://github.com/BLooperZ/newapp.git"
+  },
   "scripts": {
-    "start": "PATH=`pwd`/:$PATH app.js",
+    "start": "PATH=`pwd`/:$PATH ./app",
     "build": "npm run build:shebang && npm run build:rollup && npm run build:permissions",
-    "build:shebang": "echo '#!/usr/bin/env gjs\n' > app.js",
-    "build:rollup": "rollup -c >> app.js",
-    "build:permissions": "chmod +x app.js"
+    "build:shebang": "echo '#!/usr/bin/env gjs\n' > ./app",
+    "build:rollup": "rollup -c >> ./app",
+    "build:permissions": "chmod +x ./app"
   },
   "keywords": [
     "app",
     "node",
     "gjs"
   ],
-  "author": "Niv Baehr",
+  "author": "Niv Baehr <bloop93@gmail.com> (https://github.com/BLooperZ/)",
   "license": "ISC",
   "devDependencies": {
     "babel-plugin-external-helpers": "^6.8.0",
